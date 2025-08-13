@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from '@emotion/styled';
-import { color, ColorInput } from "./color";
-import { Theme } from "./default-theme";
+import { color, ColorInput } from "./color.js";
+import { Theme } from "./default-theme.js";
 
 export interface WordProps {
   inverse?: boolean;

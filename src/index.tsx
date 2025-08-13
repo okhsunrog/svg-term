@@ -1,2 +1,2 @@
-export { render } from "./render";
-export { SvgTerm } from "./svg-term";
+export { render } from "./render.js";
+export { SvgTerm } from "./svg-term.js";

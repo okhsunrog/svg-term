@@ -1,9 +1,9 @@
 import * as React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import styled from "@emotion/styled";
-import { LoadCastOptions, loadCast, LoadedCast } from "./load-cast";
-import { defaultTheme, Theme } from "./default-theme";
-import { SvgTerm } from "./svg-term";
+import { LoadCastOptions, loadCast, LoadedCast } from "./load-cast.js";
+import { defaultTheme, Theme } from "./default-theme.js";
+import { SvgTerm } from "./svg-term.js";
 
 export interface SvgTermOptions extends LoadCastOptions {
   at?: number;

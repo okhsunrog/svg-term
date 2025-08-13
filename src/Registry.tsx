@@ -1,9 +1,9 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { Cursor } from "./Cursor";
-import { Word } from "./Word";
+import { Cursor } from "./Cursor.js";
+import { Word } from "./Word.js";
 import { Attributes } from "load-asciicast";
-import { RGBTuple } from "./default-theme";
+import { RGBTuple } from "./default-theme.js";
 
 export interface RegistryWord {
   attr: Attributes;

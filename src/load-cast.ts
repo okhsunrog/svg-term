@@ -1,7 +1,8 @@
-import { load, Cast, LoadOptions } from "load-asciicast";
+import loadAsciicast from "load-asciicast";
+import type { Cast, LoadOptions } from "load-asciicast";
 
 export { LoadOptions as LoadCastOptions };
-export { Cast as LoadedCast, Frame as LoadedFrame } from "load-asciicast";;
+export type { Cast as LoadedCast, Frame as LoadedFrame } from "load-asciicast";
 
 export function loadCast(input: string, options: LoadOptions = {}): Cast {
   if (!input) {
@@ -9,6 +10,7 @@ export function loadCast(input: string, options: LoadOptions = {}): Cast {
   }
 
   const { width, height, idle, fps } = options;
+  const { load } = (loadAsciicast as any);
   return load(input, {
     width,
     height,

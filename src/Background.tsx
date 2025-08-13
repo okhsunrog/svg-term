@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { color, ColorInput } from "./color";
+import { color, ColorInput } from "./color.js";
 
 type RectProps = React.SVGProps<"rect">;
 

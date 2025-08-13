@@ -1,4 +1,4 @@
-type Frame = readonly [number, unknown];
+export type Frame = readonly [number, unknown];
 
 interface NearestOptions {
   cast: { frames: Frame[] };

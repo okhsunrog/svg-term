@@ -1,5 +1,5 @@
 import React from "react";
-import { color, ColorInput } from "./color";
+import { color, ColorInput } from "./color.js";
 
 export interface WindowProps {
   decorations: boolean;
