@@ -101,9 +101,10 @@ export const SvgTerm: React.FunctionComponent<SvgTermProps> = props => {
                         />
                       );
                     }
-                    return line.words.map((word: any) => {
+                    return line.words.map((word: any, wordIndex: number) => {
                       return (
                         <Word
+                          key={`${line.y}-${word.x}-${wordIndex}`}
                           bg={word.attr.bg}
                           bold={word.attr.bold}
                           fg={word.attr.fg}
