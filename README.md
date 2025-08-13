@@ -1,12 +1,12 @@
 > Share terminal sessions via SVG and CSS
 
-# svg-term
+# @okhsunrog/svg-term
 
 > This is a fork of [marionebl/svg-term](https://github.com/marionebl/svg-term)
 
-* Render [asciinema][asciinema] asciicast to animated SVG
-* Use custom themes
-* Share asciicast everywhere
+- Render [asciinema][asciinema] asciicast to animated SVG
+- Use custom themes
+- Share asciicast everywhere
 
 ```sh
 bun add @okhsunrog/svg-term
@@ -35,23 +35,23 @@ npm i @okhsunrog/svg-term
 Old (original project):
 
 ```js
-const { render } = require('svg-term');
+const { render } = require("svg-term");
 ```
 
 New (this fork, ESM-only):
 
 ```js
-import { render } from '@okhsunrog/svg-term';
+import { render } from "@okhsunrog/svg-term";
 ```
 
 ## Usage
 
 ```js
-import { readFile } from 'node:fs/promises';
-import { render } from 'svg-term';
+import { readFile } from "node:fs/promises";
+import { render } from "svg-term";
 
 (async () => {
-  const data = String(await readFile('./asciicast.json'));
+  const data = String(await readFile("./asciicast.json"));
   const svg = render(data);
   // => <svg>...</svg>
 })();
