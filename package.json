@@ -1,6 +1,6 @@
 {
   "name": "@okhsunrog/svg-term",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Share terminal sessions via SVG and CSS",
   "type": "module",
   "main": "./lib/index.js",
@@ -51,7 +51,9 @@
     "@types/node": "^24.0.0",
     "@types/object-hash": "^3.0.2",
     "rimraf": "^6.0.0",
-    "typescript": "^5.5.0"
+    "typescript": "^5.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -59,8 +61,10 @@
     "ansi-to-rgb": "^1.0.0",
     "load-asciicast": "^2.1.0",
     "lodash": "^4.17.21",
-    "object-hash": "^3.0.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "object-hash": "^3.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18 <20",
+    "react-dom": ">=18 <20"
   }
 }
