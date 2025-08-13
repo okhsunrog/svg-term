@@ -7,7 +7,7 @@
 * Share asciicast everywhere
 
 ```sh
-npm install svg-term
+bun add svg-term
 ```
 
 ## Usage

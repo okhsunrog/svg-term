@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { keyframes } from "@emotion/core";
+import { keyframes } from "@emotion/react";
 
 const PERCEPTIBLE = 1 / 60;
 
@@ -9,6 +9,7 @@ export interface ReelProps {
   width: number;
   frameWidth: number;
   stamps: number[];
+  children?: React.ReactNode;
 }
 
 export const Reel: React.FunctionComponent<ReelProps> = (props) => {

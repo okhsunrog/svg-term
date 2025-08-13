@@ -4,16 +4,16 @@
     "declaration": true,
     "declarationMap": true,
     "esModuleInterop": true,
-    "jsx": "react",
-    "lib": ["es2015", "dom"],
+    "jsx": "react-jsx",
+    "lib": ["es2020", "dom"],
     "module": "commonjs",
     "outDir": "lib/",
     "rootDir": "src/",
     "pretty": true,
     "sourceMap": true,
     "strict": true,
-    "target": "es2015",
-    "types": ["node"]
+    "target": "es2020",
+    "types": ["node", "react", "react-dom"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "typings/**/*.d.ts"]
 }

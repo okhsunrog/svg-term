@@ -8,6 +8,7 @@ export interface WindowProps {
   width: number;
   height: number;
   background: ColorInput<never>;
+  children?: React.ReactNode;
 }
 
 export const Window: React.FunctionComponent<WindowProps> = props => {
