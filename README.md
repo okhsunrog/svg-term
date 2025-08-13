@@ -2,12 +2,46 @@
 
 # svg-term
 
+> This is a fork of [marionebl/svg-term](https://github.com/marionebl/svg-term)
+
 * Render [asciinema][asciinema] asciicast to animated SVG
 * Use custom themes
 * Share asciicast everywhere
 
 ```sh
-bun add svg-term
+bun add @okhsunrog/svg-term
+# or
+npm i @okhsunrog/svg-term
+```
+
+## Differences from the original project
+
+- **ESM-only**: Package is pure ES modules (`"type": "module"`). Use `import` only. CommonJS `require()` is not supported.
+- **Bun tooling**: Uses Bun as the package manager and script runner. Lockfile is `bun.lockb`. Scripts run with `bun run ...`.
+- **Modernized dependencies**:
+  - **React/ReactDOM**: 19.x
+  - **Emotion**: 11.x (`@emotion/react` and `@emotion/styled`), no `@emotion/core`
+  - **TypeScript**: 5.x; **@types/node**: 24.x
+  - **rimraf**: 6.x; **object-hash**: 3.x
+  - Switched lodash imports to ESM-friendly per-path imports
+- **TypeScript config**: `moduleResolution: NodeNext`, `module: NodeNext`, `jsx: react-jsx`, target/lib ES2020.
+- **Removed legacy tooling**: Jest config and Webpack example config removed.
+- **Usage examples**: README now shows ESM imports; install via Bun Git URL until a package is published.
+- **Internal fixes**: Typed `children` props where missing; adjusted `ansi-to-rgb` typings for ESM; fixed interop with `load-asciicast`.
+- **API status**: Public API stays the same (`render(input, options)` and `SvgTerm` component).
+
+### Breaking change for CommonJS users
+
+Old (original project):
+
+```js
+const { render } = require('svg-term');
+```
+
+New (this fork, ESM-only):
+
+```js
+import { render } from '@okhsunrog/svg-term';
 ```
 
 ## Usage
@@ -110,3 +144,7 @@ type RGBColor = [number, number, number];
 ---
 
 [asciinema]: https://asciinema.org/
+
+---
+
+> This project is a fork of [marionebl/svg-term](https://github.com/marionebl/svg-term) maintained at [okhsunrog/svg-term](https://github.com/okhsunrog/svg-term)

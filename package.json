@@ -1,6 +1,6 @@
 {
-  "name": "svg-term",
-  "version": "2.0.3",
+  "name": "@okhsunrog/svg-term",
+  "version": "1.0.0",
   "description": "Share terminal sessions via SVG and CSS",
   "type": "module",
   "main": "./lib/index.js",
@@ -25,7 +25,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marionebl/svg-term.git"
+    "url": "git+https://github.com/okhsunrog/svg-term.git"
   },
   "keywords": [
     "asciinema",
@@ -35,11 +35,15 @@
   ],
   "author": "Mario Nebl <hello@mario-nebl.de>",
   "bugs": {
-    "url": "https://github.com/marionebl/svg-term/issues"
+    "url": "https://github.com/okhsunrog/svg-term/issues"
   },
-  "homepage": "https://github.com/marionebl/svg-term#readme",
+  "homepage": "https://github.com/okhsunrog/svg-term#readme",
   "engines": {
     "bun": ">=1.0.0"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "packageManager": "bun@1.1.0",
   "devDependencies": {
