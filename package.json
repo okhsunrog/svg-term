@@ -36,11 +36,9 @@
   "packageManager": "bun@1.1.0",
   "devDependencies": {
     "@types/lodash": "^4.14.202",
-    "@types/node": "^20.0.0",
+    "@types/node": "^24.0.0",
     "@types/object-hash": "^3.0.2",
-    "@types/react": "^18.2.0",
-    "@types/react-dom": "^18.2.0",
-    "rimraf": "^5.0.0",
+    "rimraf": "^6.0.0",
     "typescript": "^5.5.0"
   },
   "dependencies": {
@@ -50,7 +48,7 @@
     "load-asciicast": "^2.1.0",
     "lodash": "^4.17.21",
     "object-hash": "^3.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
