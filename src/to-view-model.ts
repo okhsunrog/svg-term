@@ -1,7 +1,10 @@
-import {flatMap, entries, groupBy, isEqual} from 'lodash';
+import flatMap from 'lodash/flatMap.js';
+import entries from 'lodash/entries.js';
+import groupBy from 'lodash/groupBy.js';
+import isEqual from 'lodash/isEqual.js';
 import hash from 'object-hash';
-import { LoadedCast, LoadedFrame } from './load-cast';
-import { Theme } from './default-theme';
+import { LoadedCast, LoadedFrame } from './load-cast.js';
+import { Theme } from './default-theme.js';
 import { VersionOneFrame, VersionZeroFrame, Line, Cursor, Attributes } from 'load-asciicast';
 
 export interface ViewModelOptions {
@@ -81,12 +84,14 @@ export function toViewModel(options: ViewModelOptions): ViewModel {
       };
     });
 
-  const candidates: (typeof frames[0])["lines"] = flatMap(frames, 'lines').filter(line => line.words.length > 0);
-  const hashes = groupBy(candidates, 'hash');
+  type LineView = (typeof frames[0])["lines"][number];
+  const flattened = flatMap(frames, 'lines') as LineView[];
+  const candidates: LineView[] = flattened.filter((line: LineView) => line.words.length > 0);
+  const hashes = groupBy(candidates, 'hash') as Record<string, LineView[]>;
 
-  const registry = entries(hashes)
-    .filter(([_, lines]) => lines.length > 1)
-    .map(([hash, [line]], index) => {
+  const registry = (entries(hashes) as [string, LineView[]][])
+    .filter(([, lines]) => lines.length > 1)
+    .map(([hash, [line]], index: number) => {
       const id = index + 1;
       const words = line.words.slice(0);
 

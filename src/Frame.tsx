@@ -4,6 +4,7 @@ export interface FrameProps {
   offset: number;
   width: number;
   height: number;
+  children?: React.ReactNode;
 }
 
 export const Frame: React.FunctionComponent<FrameProps> = (props) => {

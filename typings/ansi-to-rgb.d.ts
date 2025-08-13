@@ -5,6 +5,6 @@ declare module "ansi-to-rgb" {
     [key: number]: RGBTuple;
   }
 
-  var colors: AnsiColors;
-  export = colors
+  const colors: AnsiColors;
+  export default colors;
 }

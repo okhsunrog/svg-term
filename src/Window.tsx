@@ -1,5 +1,5 @@
 import React from "react";
-import { color, ColorInput } from "./color";
+import { color, ColorInput } from "./color.js";
 
 export interface WindowProps {
   decorations: boolean;
@@ -8,6 +8,7 @@ export interface WindowProps {
   width: number;
   height: number;
   background: ColorInput<never>;
+  children?: React.ReactNode;
 }
 
 export const Window: React.FunctionComponent<WindowProps> = props => {

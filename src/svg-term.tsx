@@ -1,16 +1,16 @@
 import * as React from "react";
 import styled from "@emotion/styled";
-import { Background } from "./Background";
-import { Document } from "./Document";
-import { Frame } from "./Frame";
-import { Reel } from "./Reel";
-import { Registry } from "./Registry";
-import { Window } from "./Window";
-import { Word } from "./Word";
-import { toViewModel } from "./to-view-model";
-import { from, to } from "./util";
-import { LoadedCast } from "./load-cast";
-import { Theme } from "./default-theme";
+import { Background } from "./Background.js";
+import { Document } from "./Document.js";
+import { Frame } from "./Frame.js";
+import { Reel } from "./Reel.js";
+import { Registry } from "./Registry.js";
+import { Window } from "./Window.js";
+import { Word } from "./Word.js";
+import { toViewModel } from "./to-view-model.js";
+import { from, to } from "./util.js";
+import { LoadedCast } from "./load-cast.js";
+import { Theme } from "./default-theme.js";
 
 export interface SvgTermProps {
   cast: LoadedCast;
@@ -101,9 +101,10 @@ export const SvgTerm: React.FunctionComponent<SvgTermProps> = props => {
                         />
                       );
                     }
-                    return line.words.map((word: any) => {
+                    return line.words.map((word: any, wordIndex: number) => {
                       return (
                         <Word
+                          key={`${line.y}-${word.x}-${wordIndex}`}
                           bg={word.attr.bg}
                           bold={word.attr.bold}
                           fg={word.attr.fg}

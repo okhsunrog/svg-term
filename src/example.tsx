@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import { SvgTerm } from "./svg-term";
-import { loadCast } from "./load-cast";
-import { defaultTheme } from "./default-theme";
+import { SvgTerm } from "./svg-term.js";
+import { loadCast } from "./load-cast.js";
+import { defaultTheme } from "./default-theme.js";
 
 async function main(window: Window, document: Document) {
   const container = document.createElement("div");

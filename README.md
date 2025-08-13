@@ -7,22 +7,20 @@
 * Share asciicast everywhere
 
 ```sh
-npm install svg-term
+bun add svg-term
 ```
 
 ## Usage
 
 ```js
-const fs = require('fs');
-const {promisify} = require('util');
-const readFile = promisify(fs.readFile);
-const {render} = require('svg-term');
+import { readFile } from 'node:fs/promises';
+import { render } from 'svg-term';
 
 (async () => {
   const data = String(await readFile('./asciicast.json'));
   const svg = render(data);
   // => <svg>...</svg>
-})()
+})();
 ```
 
 ## API
